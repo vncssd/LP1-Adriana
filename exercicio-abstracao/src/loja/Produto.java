@@ -39,4 +39,20 @@ public class Produto {
         this.quantidadeEmEstoque = quantidadeEmEstoque;
     }
 
+    public Integer getQuantidadeVendida() {
+        return quantidadeVendida;
+    }
+
+    public void setQuantidadeVendida(Integer quantidadeVendida) {
+        this.quantidadeVendida = quantidadeVendida;
+    }
+
+    public String gerarRelatorio(Produto produto){
+        return "PRODUTO: " + produto.getNome() +
+                "\nQUANTIDADE VENDIDA: " + produto.getQuantidadeVendida();
+    }
+
+    
+
+
 }
