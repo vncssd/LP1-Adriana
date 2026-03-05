@@ -1,0 +1,22 @@
+Loja:
+
+-> Loja
+- estoque: List<Produto>
+- balanco: Double
+- produto: Produto
+---------------------------------------------
++ adicionarProduto(Produto produto)
++ removerProduto(Produto produto)
++ venderProduto(Produto produto, int quantidade)
++ encontrarProdutos(String nome)
++ listarProdutos()
+
+-> Produto
+- nome: String
+- preco: Double
+- quantidadeEmEstoque: Integer
+- quantidadeVendida: Integer
+----------------------------------------------
++ gerarRelatorio(Produto produto)
++ promocao(Double porcentagem)
++ aumento(Double porcentagem)
