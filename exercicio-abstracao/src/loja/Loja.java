@@ -52,6 +52,7 @@ public class Loja {
 
     public void venderProduto(Produto produto, int quantidade){
         produto.setQuantidadeEmEstoque(produto.getQuantidadeEmEstoque()-quantidade);
+        produto.setQuantidadeVendida(produto.getQuantidadeVendida()+quantidade);
         setBalanco(getBalanco()+produto.getPreco());
     }
 
