@@ -87,8 +87,10 @@ public class Media {
         double max = (p1*0.5+e1*0.2+e2*0.3+x+sub*0.15);
 
         if (max > 5.9){
-            return (max*0.5)+api*0.5;
+            double notaFinal = (max*0.5)+api*0.5;
+            return Math.min(notaFinal, 10.0);
         }
+
         if (max<exf){
             return exf;
         }
