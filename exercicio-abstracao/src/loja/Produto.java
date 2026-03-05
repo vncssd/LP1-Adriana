@@ -5,14 +5,16 @@ public class Produto {
     private String nome;
     private Double preco;
     private Integer quantidadeEmEstoque;
+    private Integer quantidadeVendida;
 
     public Produto() {
     }
 
-    public Produto(String nome, Double preco, Integer quantidadeEmEstoque) {
+    public Produto(String nome, Double preco, Integer quantidadeEmEstoque, Integer quantidadeVendida) {
         this.nome = nome;
         this.preco = preco;
         this.quantidadeEmEstoque = quantidadeEmEstoque;
+        this.quantidadeVendida = quantidadeVendida;
     }
 
     public String getNome() {
@@ -52,7 +54,14 @@ public class Produto {
                 "\nQUANTIDADE VENDIDA: " + produto.getQuantidadeVendida();
     }
 
-    
+    public void promocao(Double porcentagem){
+        setPreco(preco-(preco*(porcentagem*0.01)));
+    }
+
+    public void aumento(Double porcentagem){
+        setPreco(preco+(preco*(porcentagem*0.01)));
+    }
+
 
 
 }
