@@ -20,3 +20,25 @@ Loja:
 + gerarRelatorio(Produto produto)
 + promocao(Double porcentagem)
 + aumento(Double porcentagem)
+
+
+--------------------------------------------------------------------------------------------
+Feira:
+
+-> Barraca
+- estaAberto: boolean
+- horasDeExpediente: int
+- funcionários: List<Funcionário>
+----------------------------------------------
++ contratarFuncionario(Funcionario funcionario)
++ demitirFuncionario(String nome)
++ abrirBarraca()
+
+-> Funcionario
+- nome: String
+- salarioPorHora: double
+- horasTrabalhadas: int
+------------------------------------------------
++ trabalhar (int horas)
++ gerarRelatorio (String nome)
++ receberPagamento()
