@@ -10,9 +10,34 @@ public class Equipamento {
     public Equipamento() {
     }
 
-    public Equipamento(boolean recebeuManuntencao, String modelo, String marca) {
+    public Equipamento(boolean recebeuManuntencao, String modelo, String marca, EquipamentoEstado equipamentoEstado) {
         this.recebeuManuntencao = recebeuManuntencao;
         this.modelo = modelo;
+        this.marca = marca;
+        this.equipamentoEstado = equipamentoEstado;
+    }
+
+    public boolean isRecebeuManuntencao() {
+        return recebeuManuntencao;
+    }
+
+    public void setRecebeuManuntencao(boolean recebeuManuntencao) {
+        this.recebeuManuntencao = recebeuManuntencao;
+    }
+
+    public String getModelo() {
+        return modelo;
+    }
+
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
+    }
+
+    public String getMarca() {
+        return marca;
+    }
+
+    public void setMarca(String marca) {
         this.marca = marca;
     }
 
