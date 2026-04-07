@@ -50,12 +50,13 @@ Barbearia:
 -> Barbearia
 - equipamentos: List<equipamento>
 - estaAberto: boolean
-- possuiEquipamentosManutenidos: boolean
+- possuiEquipamentosSemManutencao: boolean
 ------------------------------------------------
 + abrir()
 + fechar()
 + registrarEquipamento(Equipamento equipamento)
-+ usarEquipamento(String marcaModelo)
++ usarEquipamento(Equipamento equipamento)
++ checarManutencaoEquipamentos(): boolean
 
 -> Equipamento
 - recebeuManutenção: boolean
@@ -65,3 +66,5 @@ Barbearia:
 + ligar()
 + desligar()
 + receberManutencao()
++ buscarEquipamentoPorNome(Equipamento equipamento)
+
