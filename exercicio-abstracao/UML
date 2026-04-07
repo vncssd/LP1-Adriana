@@ -42,3 +42,26 @@ Feira:
 + trabalhar (int horas)
 + gerarRelatorio (String nome)
 + receberPagamento()
+
+
+--------------------------------------------------------------------------------------------
+Barbearia:
+
+-> Barbearia
+- equipamentos: List<equipamento>
+- estaAberto: boolean
+- possuiEquipamentosManutenidos: boolean
+------------------------------------------------
++ abrir()
++ fechar()
++ registrarEquipamento(Equipamento equipamento)
++ usarEquipamento(String marcaModelo)
+
+-> Equipamento
+- recebeuManutenção: boolean
+- modelo: String
+- marca: String
+------------------------------------------------
++ ligar()
++ desligar()
++ receberManutencao()
