@@ -22,23 +22,23 @@ public class Barraca {
         this.funcionarios = funcionarios;
     }
 
-    public String abrirBarraca(){
-        if(estaAberta){
+    public String abrirBarraca() {
+        if (estaAberta) {
             return "barraca já está aberta!";
         }
         estaAberta = true;
         return "barraca aberta";
     }
 
-    public void contratarFuncionario(Funcionario funcionario){
+    public void contratarFuncionario(Funcionario funcionario) {
         funcionarios.add(funcionario);
     }
 
-    public void demitirFuncionario(String nome){
-        for (Funcionario f : funcionarios){
-            if (f.compararNome(nome)){
+    public void demitirFuncionario(String nome) {
+        for (Funcionario f : funcionarios) {
+            if (f.compararNome(nome)) {
                 funcionarios.remove(f);
-                System.out.print("funcionário: " +nome+ " demitido");
+                System.out.print("funcionário: " + nome + " demitido");
             }
         }
 
