@@ -92,6 +92,7 @@ public class FeiraController {
 
         barraca.demitirFuncionario(selecionado.getNome());
         funcionarios.remove(selecionado);
+        mostrarAlerta("Atenção", selecionado.getNome()+ " foi demitido(a)");
     }
 
     @FXML
