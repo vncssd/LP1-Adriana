@@ -96,6 +96,33 @@ public class FeiraController {
     }
 
     @FXML
+    public void trabalhar() {
+        FuncionarioModel selecionado = tabelaFuncionarios.getSelectionModel().getSelectedItem();
+
+        if (selecionado == null) {
+            mostrarAlerta("Atenção", "Selecione um funcionário para trabalhar.");
+            return;
+        }
+
+        selecionado.trabalhar(8);
+        tabelaFuncionarios.refresh();
+    }
+
+    @FXML
+    public void pagarSalario() {
+        FuncionarioModel selecionado = tabelaFuncionarios.getSelectionModel().getSelectedItem();
+
+        if (selecionado == null) {
+            mostrarAlerta("Atenção", "Selecione um funcionário para pagar.");
+            return;
+        }
+
+        selecionado.receberPagamento();
+        selecionado.setHorasTrabalhadasSemana(0);
+        tabelaFuncionarios.refresh();
+    }
+
+    @FXML
     public void abrirBarraca() {
         String resultado = barraca.abrirBarraca();
         lblStatusBarraca.setText("Status: " + resultado);
