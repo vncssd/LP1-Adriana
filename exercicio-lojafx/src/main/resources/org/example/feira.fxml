@@ -2,7 +2,6 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Spinner?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
@@ -11,7 +10,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="400.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.FeiraController">
+<AnchorPane prefHeight="400.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.FeiraController">
     <children>
 
         <Button fx:id="btnVoltar" layoutX="20.0" layoutY="14.0" mnemonicParsing="false" onAction="#voltarMenu" text="Voltar" />
@@ -20,7 +19,7 @@
             <font><Font size="21.0" /></font>
         </Text>
 
-        <VBox alignment="CENTER" layoutX="20.0" layoutY="55.0" prefWidth="155.0" spacing="8.0">
+        <VBox alignment="CENTER" layoutX="20.0" layoutY="93.0" prefHeight="218.0" prefWidth="155.0" spacing="15.0">
             <children>
                 <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nome" />
                 <TextField fx:id="txtFldNomeFuncionario" prefWidth="145.0" />
@@ -28,13 +27,10 @@
                 <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Salário por Hora (R$)" />
                 <TextField fx:id="txtFldSalarioFuncionario" prefWidth="145.0" />
 
-                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Horas Trabalhadas" />
-                <Spinner fx:id="spinnerHoras" prefHeight="26.0" prefWidth="145.0" />
-
                 <Button mnemonicParsing="false" onAction="#contratarFuncionario" prefWidth="145.0" text="Contratar" />
-                <Button mnemonicParsing="false" onAction="#demitirFuncionario" prefWidth="145.0" text="Demitir Selecionado" />
             </children>
         </VBox>
+
         <Text layoutX="255.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Funcionários" />
         <TableView fx:id="tabelaFuncionarios" layoutX="190.0" layoutY="84.0" prefHeight="240.0" prefWidth="420.0">
             <columns>
@@ -44,8 +40,11 @@
             </columns>
         </TableView>
 
-        <Label fx:id="lblStatusBarraca" layoutX="190.0" layoutY="340.0" text="Status: fechada" />
-        <Button layoutX="500.0" layoutY="336.0" mnemonicParsing="false" onAction="#abrirBarraca" prefWidth="110.0" text="Abrir Barraca" />
+        <Label fx:id="lblStatusBarraca" layoutX="20.0" layoutY="340.0" text="Status: fechada" />
+        <Button layoutX="12.0" layoutY="358.0" mnemonicParsing="false" onAction="#abrirBarraca" prefWidth="110.0" text="Abrir Barraca" />
+          <Button layoutX="329.0" layoutY="327.0" mnemonicParsing="false" onAction="#pagarSalario" prefHeight="26.0" prefWidth="127.0" text="Pagar Salário" />
+          <Button layoutX="465.0" layoutY="327.0" mnemonicParsing="false" onAction="#demitirFuncionario" prefWidth="145.0" text="Demitir Selecionado" />
+          <Button layoutX="191.0" layoutY="327.0" mnemonicParsing="false" onAction="#trabalhar" prefHeight="26.0" prefWidth="127.0" text="Trabalhar (8h)" />
 
     </children>
 </AnchorPane>
