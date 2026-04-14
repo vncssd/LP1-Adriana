@@ -4,7 +4,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
-import org.example.model.ProdutoModel;
+import org.example.model.loja.ProdutoModel;
 import java.io.IOException;
 
 public class LojaController {
