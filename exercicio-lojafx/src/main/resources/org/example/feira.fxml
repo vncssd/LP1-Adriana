@@ -15,11 +15,11 @@
 
         <Button fx:id="btnVoltar" layoutX="20.0" layoutY="14.0" mnemonicParsing="false" onAction="#voltarMenu" text="Voltar" />
 
-        <Text layoutX="310.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FEIRA">
+        <Text layoutX="297.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FEIRA">
             <font><Font size="21.0" /></font>
         </Text>
 
-        <VBox alignment="CENTER" layoutX="20.0" layoutY="93.0" prefHeight="218.0" prefWidth="155.0" spacing="15.0">
+        <VBox alignment="CENTER" layoutX="20.0" layoutY="84.0" prefHeight="193.0" prefWidth="155.0" spacing="15.0">
             <children>
                 <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nome" />
                 <TextField fx:id="txtFldNomeFuncionario" prefWidth="145.0" />
@@ -30,8 +30,6 @@
                 <Button mnemonicParsing="false" onAction="#contratarFuncionario" prefWidth="145.0" text="Contratar" />
             </children>
         </VBox>
-
-        <Text layoutX="255.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Funcionários" />
         <TableView fx:id="tabelaFuncionarios" layoutX="190.0" layoutY="84.0" prefHeight="240.0" prefWidth="420.0">
             <columns>
                 <TableColumn fx:id="colNome" prefWidth="140.0" text="Nome" />
@@ -40,10 +38,10 @@
             </columns>
         </TableView>
 
-        <Label fx:id="lblStatusBarraca" layoutX="20.0" layoutY="340.0" text="Status: fechada" />
-        <Button layoutX="12.0" layoutY="358.0" mnemonicParsing="false" onAction="#abrirBarraca" prefWidth="110.0" text="Abrir Barraca" />
+        <Label fx:id="lblStatusBarraca" layoutX="51.0" layoutY="309.0" text="Status: fechada" />
+        <Button layoutX="43.0" layoutY="327.0" mnemonicParsing="false" onAction="#abrirBarraca" prefWidth="110.0" text="Abrir Barraca" />
           <Button layoutX="329.0" layoutY="327.0" mnemonicParsing="false" onAction="#pagarSalario" prefHeight="26.0" prefWidth="127.0" text="Pagar Salário" />
-          <Button layoutX="465.0" layoutY="327.0" mnemonicParsing="false" onAction="#demitirFuncionario" prefWidth="145.0" text="Demitir Selecionado" />
+          <Button layoutX="465.0" layoutY="327.0" mnemonicParsing="false" onAction="#demitirFuncionario" prefHeight="26.0" prefWidth="145.0" text="Demitir Selecionado" />
           <Button layoutX="191.0" layoutY="327.0" mnemonicParsing="false" onAction="#trabalhar" prefHeight="26.0" prefWidth="127.0" text="Trabalhar (8h)" />
 
     </children>

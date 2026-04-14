@@ -15,7 +15,7 @@
 
       <Button fx:id="btnVoltar" layoutX="20.0" layoutY="14.0" mnemonicParsing="false" onAction="#voltarMenu" text="Voltar" />
 
-      <Text layoutX="295.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BARBEARIA">
+      <Text layoutX="291.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BARBEARIA">
          <font><Font size="21.0" /></font>
       </Text>
 
@@ -30,22 +30,22 @@
             <Button mnemonicParsing="false" onAction="#registrarEquipamento" prefHeight="26.0" prefWidth="178.0" text="Registrar Equipamento" />
          </children>
       </VBox>
-      <TableView fx:id="tabelaEquipamentos" layoutX="202.0" layoutY="81.0" prefHeight="240.0" prefWidth="463.0">
+      <TableView fx:id="tabelaEquipamentos" layoutX="202.0" layoutY="81.0" prefHeight="240.0" prefWidth="439.0">
          <columns>
             <TableColumn fx:id="colMarca" prefWidth="110.0" text="Marca" />
             <TableColumn fx:id="colModelo" prefWidth="110.0" text="Modelo" />
-            <TableColumn fx:id="colEstado" prefWidth="124.0" text="Estado" />
-            <TableColumn fx:id="colManutencao" prefWidth="130.0" text="Manutenção" />
+            <TableColumn fx:id="colEstado" prefWidth="97.0" text="Estado" />
+            <TableColumn fx:id="colManutencao" maxWidth="121.0" prefWidth="121.0" text="Manutenção" />
          </columns>
       </TableView>
 
-      <Label fx:id="lblStatusBarbearia" layoutX="58.0" layoutY="336.0" text="Status: fechada" />
-      <Button layoutX="28.0" layoutY="358.0" mnemonicParsing="false" onAction="#abrirBarbearia" prefWidth="70.0" text="Abrir" />
-      <Button layoutX="105.0" layoutY="358.0" mnemonicParsing="false" onAction="#fecharBarbearia" prefWidth="70.0" text="Fechar" />
+      <Label fx:id="lblStatusBarbearia" layoutX="58.0" layoutY="303.0" text="Status: fechada" />
+      <Button layoutX="23.0" layoutY="327.0" mnemonicParsing="false" onAction="#abrirBarbearia" prefWidth="70.0" text="Abrir" />
+      <Button layoutX="105.0" layoutY="327.0" mnemonicParsing="false" onAction="#fecharBarbearia" prefWidth="70.0" text="Fechar" />
       <Button layoutX="12.0" layoutY="210.0" mnemonicParsing="false" onAction="#checarManutencao" prefHeight="26.0" prefWidth="173.0" text="Checar Manutenção" />
       <Button layoutX="202.0" layoutY="327.0" mnemonicParsing="false" onAction="#usarEquipamento" prefWidth="145.0" text="Usar Selecionado" />
-      <Button layoutX="515.0" layoutY="327.0" mnemonicParsing="false" onAction="#fazerManutencao" prefWidth="145.0" text="Fazer Manutenção" />
-      <Button fx:id="btnLigarDesligar" layoutX="359.0" layoutY="327.0" mnemonicParsing="false" onAction="#ligarDesligar" prefWidth="145.0" text="Ligar" />
+      <Button layoutX="511.0" layoutY="327.0" mnemonicParsing="false" onAction="#fazerManutencao" prefHeight="26.0" prefWidth="132.0" text="Fazer Manutenção" />
+      <Button fx:id="btnLigarDesligar" layoutX="364.0" layoutY="327.0" mnemonicParsing="false" onAction="#ligarDesligar" prefHeight="26.0" prefWidth="132.0" text="Ligar" />
 
    </children>
 </AnchorPane>
