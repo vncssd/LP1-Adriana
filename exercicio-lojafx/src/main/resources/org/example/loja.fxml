@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.control.DropdownButton?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.LojaController">
+    <children>
+        <Button fx:id="btnVoltar" layoutX="20.0" layoutY="14.0" mnemonicParsing="false" onAction="#voltarMenu" text="Voltar" />
+      <VBox alignment="CENTER" layoutX="48.0" layoutY="61.0" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nome" />
+            <TextField fx:id="txtFldNomeProdutoLoja" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Preço" />
+            <TextField fx:id="txtFldPrecoProdutoLoja" />
+            <Button mnemonicParsing="false" text="Cadastrar" />
+         </children>
+      </VBox>
+      <Text layoutX="277.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LOJA">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Text>
+      <TableView layoutX="200.0" layoutY="84.0" prefHeight="200.0" prefWidth="200.0">
+        <columns>
+          <TableColumn prefWidth="145.0" text="Nome" />
+          <TableColumn prefWidth="54.0" text="Preço" />
+        </columns>
+      </TableView>
+      <Text layoutX="272.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Produtos" />
+      <Label layoutX="492.0" layoutY="90.0" text="Label" />
+      <Button layoutX="479.0" layoutY="187.0" mnemonicParsing="false" text="Button" />
+      <DropdownButton layoutX="483.0" layoutY="152.0">
+          <items>
+              <MenuItem text="Choice 1" />
+              <MenuItem text="Choice 2" />
+              <MenuItem text="Choice 3" />
+          </items>
+      </DropdownButton>
+    </children>
+</AnchorPane>
