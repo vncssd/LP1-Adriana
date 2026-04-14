@@ -20,7 +20,6 @@
             <font><Font size="21.0" /></font>
         </Text>
 
-        <!-- Formulário de cadastro -->
         <VBox alignment="CENTER" layoutX="20.0" layoutY="55.0" prefWidth="150.0" spacing="8.0">
             <children>
                 <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nome" />
@@ -36,7 +35,6 @@
             </children>
         </VBox>
 
-        <!-- Tabela de produtos -->
         <Text layoutX="270.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Produtos" />
         <TableView fx:id="tabelaProdutos" layoutX="190.0" layoutY="84.0" prefHeight="240.0" prefWidth="420.0">
             <columns>
@@ -47,7 +45,6 @@
             </columns>
         </TableView>
 
-        <!-- Balanço e botão vender -->
         <Label fx:id="lblBalanco" layoutX="190.0" layoutY="340.0" text="Balanço: R$ 0,00" />
         <Button layoutX="500.0" layoutY="336.0" mnemonicParsing="false" onAction="#venderProduto" prefWidth="110.0" text="Vender (1 un)" />
 
