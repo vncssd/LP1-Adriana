@@ -18,9 +18,6 @@ public class FeiraController {
     private TextField txtFldSalarioFuncionario;
 
     @FXML
-    private Spinner<Integer> spinnerHoras;
-
-    @FXML
     private TableView<FuncionarioModel> tabelaFuncionarios;
 
     @FXML
@@ -42,10 +39,6 @@ public class FeiraController {
     public void initialize() {
         configurarTabela();
         tabelaFuncionarios.setItems(funcionarios);
-
-        SpinnerValueFactory<Integer> valueFactory =
-                new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 999, 1);
-        spinnerHoras.setValueFactory(valueFactory);
     }
 
     private void configurarTabela() {
@@ -70,11 +63,16 @@ public class FeiraController {
             return;
         }
 
-        double salario = Double.parseDouble(salarioTexto);
+        double salario;
+        try {
+            salario = Double.parseDouble(salarioTexto.replace(",", "."));
+        } catch (NumberFormatException e) {
+            mostrarAlerta("Erro", "Salário inválido.");
+            return;
+        }
 
-        int horas = spinnerHoras.getValue();
-
-        FuncionarioModel novoFuncionario = new FuncionarioModel(nome, salario, horas);
+        // horas começam em 0
+        FuncionarioModel novoFuncionario = new FuncionarioModel(nome, salario, 0);
         barraca.contratarFuncionario(novoFuncionario);
         funcionarios.add(novoFuncionario);
 
@@ -117,7 +115,11 @@ public class FeiraController {
             return;
         }
 
-        selecionado.receberPagamento();
+        if (selecionado.getHorasTrabalhadasSemana() == 0){
+            mostrarAlerta("Atenção", "Funcionário não tem horas trabalhadas a receber");
+            return;
+        }
+        mostrarAlerta("Atenção", selecionado.getNome() + " recebeu R$" + selecionado.receberPagamento());
         selecionado.setHorasTrabalhadasSemana(0);
         tabelaFuncionarios.refresh();
     }
@@ -131,7 +133,6 @@ public class FeiraController {
     private void limparCampos() {
         txtFldNomeFuncionario.clear();
         txtFldSalarioFuncionario.clear();
-        spinnerHoras.getValueFactory().setValue(1);
     }
 
     private void mostrarAlerta(String titulo, String mensagem) {
