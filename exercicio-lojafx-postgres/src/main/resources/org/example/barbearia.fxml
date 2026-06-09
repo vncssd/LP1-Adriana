@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="440.0" prefWidth="680.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.BarbeariaController">
+    <children>
+
+        <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#voltarMenu" text="Voltar" />
+        <Text layoutX="285.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BARBEARIA">
+            <font><Font size="21.0" /></font>
+        </Text>
+
+        <!-- ===== FORMULÁRIO EQUIPAMENTO ===== -->
+        <Text layoutX="14.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Equipamentos">
+            <font><Font size="13.0" /></font>
+        </Text>
+
+        <TextField fx:id="txtFldMarcaEquipamento"  layoutX="14.0"  layoutY="75.0" prefWidth="150.0" promptText="Marca" />
+        <TextField fx:id="txtFldModeloEquipamento" layoutX="172.0" layoutY="75.0" prefWidth="150.0" promptText="Modelo" />
+        <Button layoutX="330.0" layoutY="75.0" mnemonicParsing="false" onAction="#registrarEquipamento" prefWidth="155.0" text="Registrar Equipamento" />
+
+        <!-- ===== TABELA EQUIPAMENTOS ===== -->
+        <TableView fx:id="tabelaEquipamentos" layoutX="14.0" layoutY="110.0" prefHeight="220.0" prefWidth="652.0">
+            <columns>
+                <TableColumn fx:id="colMarca"     prefWidth="163.0" text="Marca" />
+                <TableColumn fx:id="colModelo"    prefWidth="163.0" text="Modelo" />
+                <TableColumn fx:id="colEstado"    prefWidth="163.0" text="Estado" />
+                <TableColumn fx:id="colManutencao" prefWidth="163.0" text="Manutenção OK?" />
+            </columns>
+        </TableView>
+
+        <!-- ===== AÇÕES SOBRE EQUIPAMENTO SELECIONADO ===== -->
+        <Text layoutX="14.0" layoutY="348.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ações no equipamento selecionado:" />
+        <Button fx:id="btnLigarDesligar" layoutX="14.0"  layoutY="358.0" mnemonicParsing="false" onAction="#ligarDesligar"   prefWidth="130.0" text="Ligar" />
+        <Button layoutX="152.0" layoutY="358.0" mnemonicParsing="false" onAction="#usarEquipamento"  prefWidth="130.0" text="Usar" />
+        <Button layoutX="290.0" layoutY="358.0" mnemonicParsing="false" onAction="#fazerManutencao"  prefWidth="130.0" text="Fazer Manutenção" />
+
+        <!-- ===== STATUS E CONTROLE DA BARBEARIA ===== -->
+        <Label fx:id="lblStatusBarbearia" layoutX="14.0" layoutY="403.0" text="Status: fechada" />
+        <Button layoutX="130.0" layoutY="399.0" mnemonicParsing="false" onAction="#abrirBarbearia"   prefWidth="90.0" text="Abrir" />
+        <Button layoutX="228.0" layoutY="399.0" mnemonicParsing="false" onAction="#fecharBarbearia"  prefWidth="90.0" text="Fechar" />
+        <Button layoutX="326.0" layoutY="399.0" mnemonicParsing="false" onAction="#checarManutencao" prefWidth="150.0" text="Checar Manutenção" />
+
+    </children>
+</AnchorPane>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="640.0" prefWidth="680.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.FarmaciaController">
+    <children>
+
+        <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#voltarMenu" text="Voltar" />
+        <Text layoutX="285.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FARMÁCIA">
+            <font><Font size="21.0" /></font>
+        </Text>
+
+        <!-- ===== SEÇÃO MEDICAMENTOS ===== -->
+        <Text layoutX="14.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Medicamentos">
+            <font><Font size="13.0" /></font>
+        </Text>
+
+        <TextField fx:id="txtNomeMedicamento"  layoutX="14.0"  layoutY="75.0" prefWidth="150.0" promptText="Nome" />
+        <TextField fx:id="txtPrecoMedicamento" layoutX="172.0" layoutY="75.0" prefWidth="80.0"  promptText="Preço (R$)" />
+        <TextField fx:id="txtQtdMedicamento"   layoutX="260.0" layoutY="75.0" prefWidth="70.0"  promptText="Qtd" />
+        <ComboBox  fx:id="comboTipo"           layoutX="338.0" layoutY="75.0" prefWidth="120.0" />
+        <Button layoutX="466.0" layoutY="75.0" mnemonicParsing="false" onAction="#cadastrarMedicamento"  prefWidth="90.0" text="Cadastrar" />
+        <Button layoutX="564.0" layoutY="75.0" mnemonicParsing="false" onAction="#venderMedicamento"     prefWidth="70.0" text="Vender" />
+
+        <TableView fx:id="tabelaMedicamentos" layoutX="14.0" layoutY="108.0" prefHeight="175.0" prefWidth="652.0">
+            <columns>
+                <TableColumn fx:id="colNomeMed"    prefWidth="180.0" text="Nome" />
+                <TableColumn fx:id="colPrecoMed"   prefWidth="110.0" text="Preço (R$)" />
+                <TableColumn fx:id="colEstoqueMed" prefWidth="110.0" text="Em Estoque" />
+                <TableColumn fx:id="colVendidoMed" prefWidth="110.0" text="Qtd Vendida" />
+                <TableColumn fx:id="colTipoMed"    prefWidth="142.0" text="Tipo" />
+            </columns>
+        </TableView>
+
+        <Button layoutX="14.0"  layoutY="293.0" mnemonicParsing="false" onAction="#removerMedicamento"      prefWidth="140.0" text="Remover Selecionado" />
+        <Button layoutX="162.0" layoutY="293.0" mnemonicParsing="false" onAction="#verificarEstoqueCritico" prefWidth="160.0" text="Verificar Estoque Crítico" />
+
+        <!-- ===== SEÇÃO FARMACÊUTICOS ===== -->
+        <Text layoutX="14.0" layoutY="335.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Farmacêuticos">
+            <font><Font size="13.0" /></font>
+        </Text>
+
+        <TextField fx:id="txtNomeFarmaceutico" layoutX="14.0"  layoutY="345.0" prefWidth="200.0" promptText="Nome" />
+        <TextField fx:id="txtCrfFarmaceutico"  layoutX="222.0" layoutY="345.0" prefWidth="150.0" promptText="CRF" />
+        <Button layoutX="380.0" layoutY="345.0" mnemonicParsing="false" onAction="#cadastrarFarmaceutico" prefWidth="100.0" text="Cadastrar" />
+        <Button layoutX="488.0" layoutY="345.0" mnemonicParsing="false" onAction="#alternarServico"       prefWidth="100.0" text="Entrar/Sair Serviço" />
+        <Button layoutX="596.0" layoutY="345.0" mnemonicParsing="false" onAction="#removerFarmaceutico"   prefWidth="70.0"  text="Remover" />
+
+        <TableView fx:id="tabelaFarmaceuticos" layoutX="14.0" layoutY="378.0" prefHeight="175.0" prefWidth="652.0">
+            <columns>
+                <TableColumn fx:id="colNomeFarm"    prefWidth="260.0" text="Nome" />
+                <TableColumn fx:id="colCrfFarm"     prefWidth="196.0" text="CRF" />
+                <TableColumn fx:id="colServicoFarm" prefWidth="196.0" text="De Serviço?" />
+            </columns>
+        </TableView>
+
+        <!-- ===== STATUS E CONTROLE DA FARMÁCIA ===== -->
+        <Label fx:id="lblStatusFarmacia" layoutX="14.0" layoutY="567.0" text="Status: fechada" />
+        <Button layoutX="130.0" layoutY="563.0" mnemonicParsing="false" onAction="#abrirFarmacia"  prefWidth="90.0" text="Abrir" />
+        <Button layoutX="228.0" layoutY="563.0" mnemonicParsing="false" onAction="#fecharFarmacia" prefWidth="90.0" text="Fechar" />
+
+    </children>
+</AnchorPane>
